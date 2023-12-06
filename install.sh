@@ -3,9 +3,20 @@
 
 # Install function for single file
 InstallFile() {
-	rm ~/.$1.bak 2> /dev/null
-	mv ~/.$1 ~/.$1.bak 2> /dev/null
-	ln -s ${PWD}/$1 ~/.$1
+        if [[ -L "~/.$1.bak" ]]
+        then
+                rm ~/.$1.bak 2> /dev/null
+                mv -n ~/.$1 ~/.$1.bak 2> /dev/null
+        else
+                if [[ -L "~/.$1" ]]
+                then
+                        rm ~/.$1 2> /dev/null
+                else
+                        rm ~/.$1.bak 2> /dev/null
+                        mv ~/.$1 ~/.$1.bak
+                fi
+        fi
+        ln -s ${PWD}/$1 ~/.$1
 }
 
 # Install individual files
