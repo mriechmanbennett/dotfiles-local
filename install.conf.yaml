@@ -5,7 +5,7 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig_local: gitconfig_local
+    ~/.gitconfig_local:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
