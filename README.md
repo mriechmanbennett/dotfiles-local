@@ -1,4 +1,4 @@
 # dotfiles-local
 Repo to store more personalized configs
 
-Format shamelessly stolen from https://github.com/anishathalye/dotfiles-local
+Dependent on https://github.com/anishathalye/dotbot
