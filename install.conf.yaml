@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/ref-notes: notes
     ~/.gitconfig_local:
 
 - shell:
